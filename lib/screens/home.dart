@@ -42,7 +42,7 @@ List widgets = [
           unselectedFontSize: 14,
           onTap: changePage,
           items: const [
-            BottomNavigationBarItem(
+            BottomNavigationBarItem(  
                 icon: Icon(Icons.comment_bank), label: 'Meet & Chat'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.lock_clock), label: 'Meetings'),

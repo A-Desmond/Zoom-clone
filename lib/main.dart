@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ZOOM CLONE',
+      title: 'WE FACE',
       theme:
           ThemeData.dark().copyWith(scaffoldBackgroundColor: scaffoldbackgroud),
       home: StreamBuilder(
