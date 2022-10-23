@@ -8,6 +8,7 @@ class Auth {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   Stream<User?> get authState => _auth.authStateChanges();
+  User get user => _auth.currentUser!;
 
   Future<bool> singInWithGoogle(BuildContext context) async {
     var res = false;

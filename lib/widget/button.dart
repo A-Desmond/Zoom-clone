@@ -14,13 +14,13 @@ class Button extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: ElevatedButton(
         onPressed:onPressed,
-        child: Text(text, style: const TextStyle(fontSize: 17)),
         style: ElevatedButton.styleFrom(
             backgroundColor: buttonColor,
             minimumSize: const Size(double.infinity, 50),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
                 side: const BorderSide(color: buttonColor))),
+        child:  Text(text, style: const TextStyle(fontSize: 17)),
       ),
     );
   }

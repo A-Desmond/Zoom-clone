@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:zoom/screens/meeting_history.dart';
+import 'package:zoom/screens/meeting_screen.dart';
 import 'package:zoom/utils/colors.dart';
-import 'package:zoom/widget/meeting_botton.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,6 +19,10 @@ class _HomeState extends State<Home> {
     });
   }
 
+List widgets = [
+  MeetingScreen(),
+ const MeetingHistory()
+];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,36 +32,7 @@ class _HomeState extends State<Home> {
         centerTitle: true,
         backgroundColor: scaffoldbackgroud,
       ),
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              MeetingButton(
-                icon: Icons.videocam,
-                text: 'Meeting',
-                onTap: () {},
-              ),
-              MeetingButton(
-                icon: Icons.add_box_rounded,
-                text: 'Join Meeting',
-                onTap: () {},
-              ),
-              MeetingButton(
-                icon: Icons.calendar_today,
-                text: 'Schedule',
-                onTap: () {},
-              ),
-                MeetingButton(
-                icon: Icons.arrow_upward,
-                text: 'Share',
-                onTap: () {},
-              ),
-            ],
-          ),
-         const  Expanded(child:  Center(child: Text('Create a meeting')))
-        ],
-      ),
+      body: widgets[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: selectedIndex,
           backgroundColor: footerColor,
@@ -76,8 +50,6 @@ class _HomeState extends State<Home> {
                 icon: Icon(Icons.person_outline), label: 'Contacts'),
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings), label: 'Settings'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.comment_bank), label: 'Meet & Chat'),
           ]),
     );
   }

@@ -5,6 +5,7 @@ import 'package:zoom/controllers/auth.dart';
 import 'package:zoom/firebase_options.dart';
 import 'package:zoom/screens/home.dart';
 import 'package:zoom/screens/login.dart';
+import 'package:zoom/screens/video_call_screen.dart';
 
 import 'utils/colors.dart';
 
@@ -41,10 +42,13 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/login': (context) => const Login(),
-        '/home': (context)=> Home()
+        '/home': (context)=> const Home(),
+        '/video_call':(context)=>const  JoinMeeting()
       },
     );
   }
 }
+
+//progauard file to be added 1 hour 17 mins
 
 
